@@ -1,4 +1,4 @@
-# Project Name
+# Archetype Based Conformal Intervals (ABCI)
 
 This repository contains a script to perform archetypal-based conformal intervals (ABCI) method on different datasets with varying parameters. Below are the example command-line usages.
 
