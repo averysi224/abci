@@ -11,19 +11,10 @@ This repository contains a script to perform archetypal-based conformal interval
    pip install -e .
    ```
    
-## Download Dataset
-
-To run the experiments, download the datasets and extract them into the `data' folder.
-
-### UW Dataset
-```bash
-wget https://drive.google.com/uc?export=download&id=1r12w4RsmaJEC_9mr2J5cCX9ZIXyMgWaY 
-```
-
-### Scheie Dataset
-```bash
-wget https://drive.google.com/uc?export=download&id=1iJEmjEcdKetcpEbK0JM0E9q0n9M98tyU
-```
+## 📥 Download Dataset
+To run the experiments, download the required datasets from the links below:
+- **UW Dataset**: [Download](https://drive.google.com/file/d/1r12w4RsmaJEC_9mr2J5cCX9ZIXyMgWaY/view?usp=drive_link)
+- **Scheie Dataset**: [Download](https://drive.google.com/file/d/1iJEmjEcdKetcpEbK0JM0E9q0n9M98tyU/view?usp=drive_link)
 
 
 ## 💌 Basic Usage
