@@ -1,6 +1,7 @@
 # Archetype Based Conformal Intervals (ABCI)
 
-This repository contains a script to perform archetypal-based conformal intervals (ABCI) method on different datasets with varying parameters. Below are the example command-line usages.
+This repository provides the official implementation of the methods presented in our paper, Reliable and Interpretable Visual Field Progression Prediction with Diffusion Models and Conformal Prediction, which has been accepted for publication at MICCAI 2025. 
+Below are the example command-line usages.
 
 ## Installation
 
