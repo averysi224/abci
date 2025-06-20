@@ -1,7 +1,6 @@
 # Archetype Based Conformal Intervals (ABCI)
 
 This repository provides the official implementation of the methods presented in our paper, *Reliable and Interpretable Visual Field Progression Prediction with Diffusion Models and Conformal Prediction*, which has been accepted for publication at MICCAI 2025. 
-Below are the example command-line usages.
 
 ## Installation
 
