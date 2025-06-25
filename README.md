@@ -2,6 +2,8 @@
 
 This repository provides the official implementation of the methods presented in our paper, *Reliable and Interpretable Visual Field Progression Prediction with Diffusion Models and Conformal Prediction*, which has been accepted for publication at MICCAI 2025. 
 
+[miccai_overview.pdf](https://github.com/user-attachments/files/20896737/miccai_overview.pdf)
+
 ## Installation
 
 1. Install the required dependencies:
