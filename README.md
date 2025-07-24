@@ -17,7 +17,7 @@ This repository provides the official implementation of the methods presented in
 ## 📥 Download Dataset
 To run the experiments, download the required datasets from the links below:
 - **UW Dataset**: [Download](https://drive.google.com/file/d/1r12w4RsmaJEC_9mr2J5cCX9ZIXyMgWaY/view?usp=drive_link)
-- **Scheie Dataset**: [Download](https://drive.google.com/file/d/1iJEmjEcdKetcpEbK0JM0E9q0n9M98tyU/view?usp=drive_link)
+- **GRN Dataset**: [Download](https://drive.google.com/file/d/1iJEmjEcdKetcpEbK0JM0E9q0n9M98tyU/view?usp=drive_link)
 
 unzip them in the 'puq/data' folder.
 
