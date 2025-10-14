@@ -10,7 +10,7 @@ This repository provides the official implementation of the methods presented in
 1. Install the required dependencies:
 
    ```bash
-   cd puq
+   cd abci
    pip install -e .
    ```
    
