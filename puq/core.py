@@ -59,7 +59,8 @@ class PUQUncertaintyRegion:
     def _eval_metrics(self, *args, **kwargs):
         raise NotImplementedError
 
-    def _compute_intervals(self, samples, eval=False):
+    # change 2: add the to_sort option so that we can also have predicted scores without reordering
+    def _compute_intervals(self, samples, eval=False, to_sort=True):
         if self.max_pcs is not None and samples.shape[1] > self.max_pcs:
             rand_indices = torch.randperm(samples.shape[1])[:self.max_pcs]
             samples = samples[:, rand_indices]
@@ -77,17 +78,21 @@ class PUQUncertaintyRegion:
 
         lower = torch.quantile(projections, self.opt.alpha/2, dim=1)
         upper = torch.quantile(projections, 1-(self.opt.alpha/2), dim=1)
-        # reorder from large to small
-        indices = coefficients.argsort(dim=1, descending=True)
         
-        coefficients = torch.gather(coefficients, dim=1, index=indices)
-        archetype_basis = torch.gather(archetype_basis, dim=1, index=indices.unsqueeze(-1).expand(-1, -1, 81))
-        lower = torch.gather(lower, dim=1, index=indices)
-        upper = torch.gather(upper, dim=1, index=indices)
-
-        if eval:
-            # indices are the number of the archetypes
-            return mu, archetype_basis.mT, coefficients, lower, upper, indices
+        if to_sort:
+            # reorder from large to small
+            indices = coefficients.argsort(dim=1, descending=True)
+            
+            coefficients = torch.gather(coefficients, dim=1, index=indices)
+            archetype_basis = torch.gather(archetype_basis, dim=1, index=indices.unsqueeze(-1).expand(-1, -1, 81))
+            lower = torch.gather(lower, dim=1, index=indices)
+            upper = torch.gather(upper, dim=1, index=indices)
+    
+            if eval:
+                # indices are the number of the archetypes
+                return mu, archetype_basis.mT, coefficients, lower, upper, indices
+            else:
+                return mu, archetype_basis.mT, coefficients, lower, upper
         else:
             return mu, archetype_basis.mT, coefficients, lower, upper
 
